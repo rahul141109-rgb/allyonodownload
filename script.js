@@ -54,8 +54,8 @@ const apps = [
     { name: "Yn777", category: "High Bonus", version: "2.0.9", logo: "logo.png", link: "https://www.yn077.com/?code=4SW5U6RYC42&t=1786832038" },
     { name: "Yono Games", category: "High Bonus", version: "4.2.7", logo: "logo.png", link: "http://youonogamesluckydraw.com/?code=P6RXQSS6&t=1786832248" },
     { name: "Rummy 77", category: "High Bonus", version: "1.7.2", logo: "logo.png", link: "https://rummy77bet.net/?code=F3VGDT5U6QA&t=1787312679" },
-    { name: "Ok Rummy", category: "High Bonus", version: "5.3.6", logo: "logo.png", link: "https://www.okrummy18.com/?code=H2GZEY7Z7NA&t=1787326067" },
-    { name: "Gogo Rummy", category: "High Bonus", version: "3.0.8", logo: "logo.png", link: "https://www.gogorummyfun.com/?code=8FWK5A4XC53&t=1786829070" },
+    { name: "Mqm Bet", category: "High Bonus", version: "5.3.6", logo: "logo.png", link: "https://5mqmshare.vip?pid=336805888&channel=2070983&pkg=com.mqmrfkfsxwas.vva" },
+    { name: "Gold Rummy", category: "High Bonus", version: "3.0.8", logo: "logo.png", link: "https://goldrummy27.com/?code=JLX8SN6VVWL&t=1788172885" },
     { name: "DiwaX", category: "High Bonus", version: "6.5.1", logo: "logo.png", link: "https://diwaxshare.net?pid=344576272&channel=2010002&t=pdd2&pkg=com.diwax002.app" }
 ];
 const appsPerPage = 9;
