@@ -28,12 +28,25 @@ body {
     gap: 14px;
 }
 
+/* Logo */
 .brand-logo {
     width: 58px;
     height: 58px;
+    min-width: 58px;
     border-radius: 16px;
-    object-fit: cover;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
     box-shadow: 0 0 25px rgba(0,255,180,0.18);
+}
+
+.brand-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .brand h1 {
@@ -326,4 +339,4 @@ body {
     .archive-heading {
         align-items: start;
     }
-                     }
+    }
