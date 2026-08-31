@@ -53,7 +53,7 @@ const apps = [
     { name: "Top Rummy", category: "High Bonus", version: "7.1.8", logo: "IMG_20260830_034225_263.jpg", link: "https://www.toprummy.xyz/?code=7K9J48XWHYT&t=1786831948" },
     { name: "Yn777", category: "High Bonus", version: "2.0.9", logo: "IMG_20260830_034427_853.jpg", link: "https://www.yn077.com/?code=4SW5U6RYC42&t=1786832038" },
     { name: "Yono Games", category: "High Bonus", version: "4.2.7", logo: "images (1).jpeg", link: "http://youonogamesluckydraw.com/?code=P6RXQSS6&t=1786832248" },
-    { name: "Rummy 77", category: "High Bonus", version: "1.7.2", logo: "", link: "https://rummy77bet.net/?code=F3VGDT5U6QA&t=1787312679" },
+    { name: "Rummy 77", category: "High Bonus", version: "1.7.2", logo: "IMG_20260830_033645_429.jpg", link: "https://rummy77bet.net/?code=F3VGDT5U6QA&t=1787312679" },
     { name: "Mqm Bet", category: "High Bonus", version: "5.3.6", logo: "IMG_20260830_103521_459.jpg", link: "https://5mqmshare.vip?pid=336805888&channel=2070983&pkg=com.mqmrfkfsxwas.vva" },
     { name: "Gold Rummy", category: "High Bonus", version: "3.0.8", logo: "IMG_20260831_162328_171.jpg", link: "https://goldrummy27.com/?code=JLX8SN6VVWL&t=1788172885" },
     { name: "DiwaX", category: "High Bonus", version: "6.5.1", logo: "IMG_20260831_155657_152.jpg", link: "https://diwaxshare.net?pid=344576272&channel=2010002&t=pdd2&pkg=com.diwax002.app" }
