@@ -64,7 +64,7 @@ const apps = [
     { name: "Diwaking", category: "Sign Up Bonus 850", version: "1.0.0", logo: "IMG_20260904_121237_495.jpg", link: "https://diwakingshare.pro" },
     { name: "Diwagame", category: "Sign Up Bonus 650", version: "1.0.0", logo: "IMG_20260904_121259_177.jpg", link: "https://diwagameshare.club" },
     { name: "Diwa777", category: "Sign Up Bonus 250", version: "1.0.0", logo: "IMG_20260904_121314_569.jpg", link: "https://sharediwa7775.top" },
-    { name: "Goodslot", category: "Sign Up Bonus 950", version: "1.0.0", logo: "IMG_20260904_121327_540.jpg", link: "https://sharegoodslots.vip" }]
+    { name: "Goodslot", category: "Sign Up Bonus 950", version: "1.0.0", logo: "IMG_20260904_121327_540.jpg", link: "https://sharegoodslots.vip" }
 ];;
 const appsPerPage = 9;
 
