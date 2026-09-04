@@ -56,15 +56,15 @@ const apps = [
     { name: "Rummy 77", category: "Sign Up Bonus ₹450", version: "1.7.2", logo: "IMG_20260830_033645_429.jpg", link: "https://rummy77bet.net/?code=F3VGDT5U6QA&t=1787312679" },
     { name: "Mqm Bet", category: "Sign Up Bonus ₹550", version: "5.3.6", logo: "IMG_20260831_162328_171.jpg", link: "https://5mqmshare.vip?pid=336805888&channel=2070983&pkg=com.mqmrfkfsxwas.vva" },
     { name: "Gold Rummy", category: "Sign Up Bonus ₹950", version: "3.0.8", logo: "IMG_20260830_103521_459.jpg", link: "https://goldrummy27.com/?code=JLX8SN6VVWL&t=1788172885" },
-    { name: "DiwaX", category: "Sign Up Bonus ₹650", version: "6.5.1", logo: "IMG_20260831_155657_152.jpg", link: "https://diwaxshare.net?pid=344576272&channel=2010002&t=pdd2&pkg=com.diwax002.app" }
-    { name: "Diwawin", category: "Sign Up Bonus 550", version: "1.0.0", logo: "IMG_20260904_120826_591.jpg", link: "https://diwawinshare.app" },
-    { name: "Diwavip", category: "Sign Up Bonus 350", version: "1.0.0", logo: "IMG_20260904_121026_742.jpg", link: "https://diwavipshare.info" },
-    { name: "Diwatop", category: "Sign Up Bonus 750", version: "1.0.0", logo: "IMG_20260904_121157_791.jpg", link: "https://diwatopshare.club" },
-    { name: "Diwaslot", category: "Sign Up Bonus 450", version: "1.0.0", logo: "IMG_20260904_121220_595.jpg", link: "https://sharediwaslots5.vip" },
-    { name: "Diwaking", category: "Sign Up Bonus 850", version: "1.0.0", logo: "IMG_20260904_121237_495.jpg", link: "https://diwakingshare.pro" },
-    { name: "Diwagame", category: "Sign Up Bonus 650", version: "1.0.0", logo: "IMG_20260904_121259_177.jpg", link: "https://diwagameshare.club" },
-    { name: "Diwa777", category: "Sign Up Bonus 250", version: "1.0.0", logo: "IMG_20260904_121314_569.jpg", link: "https://sharediwa7775.top" },
-    { name: "Goodslot", category: "Sign Up Bonus 950", version: "1.0.0", logo: "IMG_20260904_121327_540.jpg", link: "https://sharegoodslots.vip" }
+    { name: "DiwaX", category: "Sign Up Bonus ₹650", version: "6.5.1", logo: "IMG_20260831_155657_152.jpg", link: "https://diwaxshare.net?pid=344576272&channel=2010002&t=pdd2&pkg=com.diwax002.app" },
+    { name: "Diwawin", category: "Sign Up Bonus 550", version: "1.0.0", logo: "IMG_20260904_120826_591.jpg", link: "https://diwawinshare.app?pid=279505682&channel=2050001&t=pdd2&pkg=com.diwawin.h5" },
+    { name: "Diwavip", category: "Sign Up Bonus 350", version: "1.0.0", logo: "IMG_20260904_121026_742.jpg", link: "https://diwavipshare.info?pid=406318342&channel=2050001&pkg=com.diwavip.h5" },
+    { name: "Diwatop", category: "Sign Up Bonus 750", version: "1.0.0", logo: "IMG_20260904_121157_791.jpg", link: "https://diwatopshare.club?pid=429404049&channel=2010001&t=pdd2&pkg=com.diwatop.app" },
+    { name: "Diwaslot", category: "Sign Up Bonus 450", version: "1.0.0", logo: "IMG_20260904_121220_595.jpg", link: "https://sharediwaslots5.vip?pid=351234415&channel=2010002&t=pdd2&pkg=com.diwaslotwhl.app" },
+    { name: "Diwaking", category: "Sign Up Bonus 850", version: "1.0.0", logo: "IMG_20260904_121237_495.jpg", link: "https://diwakingshare.pro?pid=449873223&channel=2010002&pkg=com.diwaking0002.com" },
+    { name: "Diwagame", category: "Sign Up Bonus 650", version: "1.0.0", logo: "IMG_20260904_121259_177.jpg", link: "https://diwagameshare.club?pid=294052353&channel=2010003&t=pdd2&pkg=com.diwagamedlx.app" },
+    { name: "Diwa777", category: "Sign Up Bonus 250", version: "1.0.0", logo: "IMG_20260904_121314_569.jpg", link: "https://sharediwa7775.top?pid=464122371&channel=2010002&t=pdd2&pkg=com.diwa777wh.com" },
+    { name: "Goodslot", category: "Sign Up Bonus 950", version: "1.0.0", logo: "IMG_20260904_121327_540.jpg", link: "https://sharegoodslots.vip?pid=396692864&channel=2020001&t=pdd2&pkg=com.goodslotsa.dss" }
 ];;
 const appsPerPage = 9;
 
