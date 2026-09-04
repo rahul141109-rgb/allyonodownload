@@ -77,84 +77,7 @@ const searchInput = document.getElementById("searchInput");
 const noResults = document.getElementById("noResults");
 const appCount = document.getElementById("appCount");
 
-function renderApps() {
-    appList.innerHTML = "";
-
-    const start = (currentPage - 1) * appsPerPage;
-    const pageApps = filteredApps.slice(start, start + appsPerPage);
-
-    if (pageApps.length === 0) {
-        noResults.style.display = "block";
-        return;
-    }
-
-    noResults.style.display = "none";
-
-    pageApps.forEach(app => {
-        const card = document.createElement("div");
-        card.className = "app-card";
-
-        card.innerHTML = `
-            <div class="app-image">
-                <img src="${app.logo}" alt="${app.name}">
-            </div>
-
-            <div class="app-info">
-                <h3>${app.name}</h3>
-                <p>${app.category}</p>
-
-                <div class="app-meta">
-                    <span>Version</span>
-                    <strong>${app.version}</strong>
-                </div>
-
-                <a class="download-btn"
-                   href="${app.link}"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    ⬇ Download
-                </a>
-            </div>
-        `;
-
-        appList.appendChild(card);
-    });
-
-    renderPagination();
-}
-
-function renderPagination() {
-    pagination.innerHTML = "";
-
-    const totalPages = Math.ceil(filteredApps.length / appsPerPage);
-
-    if (totalPages <= 1) return;
-
-    const previous = document.createElement("button");
-    previous.innerHTML = "‹";
-    previous.disabled = currentPage === 1;
-
-    previous.onclick = () => {
-        if (currentPage > 1) {
-            currentPage--;
-            renderApps();
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        }
-    };
-
-    pagination.appendChild(previous);
-const appsPerPage = 9;
-
-let currentPage = 1;
-let filteredApps = [...apps];
-
-const appList = document.getElementById("appList");
-const pagination = document.getElementById("pagination");
-const searchInput = document.getElementById("searchInput");
-const noResults = document.getElementById("noResults");
-const appCount = document.getElementById("appCount");
-
-// Automatic total app count
+// Automatic app count
 appCount.textContent = `${apps.length} APPS`;
 
 function renderApps() {
@@ -212,7 +135,7 @@ function renderPagination() {
     if (totalPages <= 1) return;
 
     const previous = document.createElement("button");
-    previous.innerHTML = "‹";
+    previous.textContent = "‹";
     previous.disabled = currentPage === 1;
 
     previous.onclick = () => {
@@ -227,6 +150,7 @@ function renderPagination() {
 
     for (let i = 1; i <= totalPages; i++) {
         const button = document.createElement("button");
+
         button.textContent = i;
 
         if (i === currentPage) {
@@ -243,7 +167,7 @@ function renderPagination() {
     }
 
     const next = document.createElement("button");
-    next.innerHTML = "›";
+    next.textContent = "›";
     next.disabled = currentPage === totalPages;
 
     next.onclick = () => {
@@ -267,7 +191,6 @@ searchInput.addEventListener("input", () => {
 
     currentPage = 1;
 
-    // Automatically show filtered result count
     appCount.textContent = `${filteredApps.length} APPS`;
 
     renderApps();
