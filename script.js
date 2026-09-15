@@ -1,5 +1,5 @@
 const apps = [
-    { name: "Yono Vip", category: "Sign Up Bonus ₹550", version: "1.0.4", logo: "IMG_20260830_035054_674.jpg", link: "https://uonovipplay.vip/?code=3CRUNXZYBK4&t=1786231255" },
+    { name: "Boss Rummy", category: "Sign Up Bonus ₹550", version: "1.0.4", logo: "IMG_20260830_031013_336.jpg", link: "https://www.bossrummyxx.com/?code=9HFS3SWHV17&t=1786827373" },
     { name: "789 Jackpot", category: "Sign Up Bonus ₹750", version: "2.3.1", logo: "IMG_20260830_035150_344.jpg", link: "https://join789jackpots2.com/?code=J7Z1V5MF7Z5&t=1786221787" },
     { name: "Ind Rummy", category: "Sign Up Bonus ₹750", version: "4.1.0", logo: "IMG_20260830_031737_470.jpg", link: "https://rummyjoys.com/?code=R9A87SA849B&t=1786221848" },
     { name: "Yono Slots", category: "Sign Up Bonus ₹450", version: "3.8.2", logo: "IMG_20260830_034930_075.jpg", link: "https://yonoslotsjackwin.com/?code=59YC58TCXQ6&t=1786221904" },
@@ -35,7 +35,7 @@ const apps = [
     { name: "Game Rummy", category: "Sign Up Bonus ₹150", version: "2.6.9", logo: "IMG_20260830_031130_318.jpg", link: "https://gamesrummy.vip/?code=Q6W1UHF26Q4&t=1786829178" },
     { name: "Gogo Rummy", category: "Sign Up Bonus ₹550", version: "6.4.1", logo: "IMG_20260830_031206_950.jpg", link: "https://www.gogorummyfun.com/?code=8FWK5A4XC53&t=1786829070" },
     { name: "Hi Rummy", category: "Sign Up Bonus ₹150", version: "3.9.0", logo: "IMG_20260830_031223_353.jpg", link: "https://joinhirummy.cc/?code=RX3G3K6RKAN&t=1786829350" },
-    { name: "Boss Rummy", category: "Sign Up Bonus ₹350", version: "1.5.3", logo: "IMG_20260830_031013_336.jpg", link: "https://www.bossrummyxx.com/?code=9HFS3SWHV17&t=1786827373" },
+    { name: "Yono Vip", category: "Sign Up Bonus ₹350", version: "1.5.3", logo: "IMG_20260830_035054_674.jpg", link: "https://uonovipplay.vip/?code=3CRUNXZYBK4&t=1786231255" },
     { name: "Hindi777", category: "Sign Up Bonus ₹650", version: "7.2.6", logo: "IMG_20260830_031243_911.jpg", link: "https://www.hindi777agent5.com/?code=7LF2BNVLM76&t=1786829531" },
     { name: "Ind Club", category: "Sign Up Bonus ₹350", version: "4.8.4", logo: "IMG_20260830_031641_744.jpg", link: "http://indclub95.com/?code=34UWXNU7HM4&t=1786829663" },
 
