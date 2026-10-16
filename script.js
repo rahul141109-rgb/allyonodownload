@@ -69,7 +69,8 @@ const apps = [
     { name: "Diwa Play", category: "Sign Up Bonus 950", version: "1.0.0", logo: "IMG_20260910_134721_206.jpg", link: "https://diwaplayshare.club?pid=399680035&channel=2010002&t=pdd2&pkg=com.diwaplaywhl.app" },
     { name: "Jeet Spin", category: "Sign Up Bonus 950", version: "1.0.0", logo: "IMG_20261010_002626_902.jpg", link: "https://www.jeetspin13.com/?code=SYHXWPB4LM1&t=1790745051" },
     { name: "Diwa Ace", category: "Sign Up Bonus 950", version: "1.0.0", logo: "IMG_20261010_003058_847.jpg", link: "https://diwaace.diwaapp.workers.dev/?pid=465116426" },
-    { name: "Diwa Rummy", category: "Sign Up Bonus 950", version: "1.0.0", logo: "IMG_20261010_003354_771.jpg", link: "https://diwaprummyshare.club?pid=531566392&channel=2010002&t=pdd2&pkg=com.diwarummywhl.app" }
+    { name: "Diwa Rummy", category: "Sign Up Bonus 950", version: "1.0.0", logo: "IMG_20261010_003354_771.jpg", link: "https://diwaprummyshare.club?pid=531566392&channel=2010002&t=pdd2&pkg=com.diwarummywhl.app" },
+    { name: "Club Inr", category: "Sign Up Bonus 950", version: "1.0.0", logo: "IMG_20261016_174013_105.jpg", link: "https://clubinr.baby/?code=9VC2XUQ4QVT&t=1792152559" }
     
 ];;
 const appsPerPage = 9;
