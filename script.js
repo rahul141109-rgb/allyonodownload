@@ -1,5 +1,5 @@
 const apps = [
-    { name: "Boss Rummy", category: "Sign Up Bonus ₹550", version: "1.0.4", logo: "IMG_20260830_031013_336.jpg", link: "https://www.bossrummyxx.com/?code=9HFS3SWHV17&t=1786827373" },
+    { name: "Money Rummy", category: "Sign Up Bonus ₹550", version: "1.0.4", logo: "IMG_20260910_134532_812.jpg", link: "https://moneyrummyv.com/?code=T1X1NCXTSN4&t=1789027939" },
     { name: "789 Jackpot", category: "Sign Up Bonus ₹750", version: "2.3.1", logo: "IMG_20260830_035150_344.jpg", link: "https://join789jackpots2.com/?code=J7Z1V5MF7Z5&t=1786221787" },
     { name: "Ind Rummy", category: "Sign Up Bonus ₹750", version: "4.1.0", logo: "IMG_20260830_031737_470.jpg", link: "https://rummyjoys.com/?code=R9A87SA849B&t=1786221848" },
     { name: "Yono Slots", category: "Sign Up Bonus ₹450", version: "3.8.2", logo: "IMG_20260830_034930_075.jpg", link: "https://yonoslotsjackwin.com/?code=59YC58TCXQ6&t=1786221904" },
@@ -65,7 +65,7 @@ const apps = [
     { name: "Diwagame", category: "Sign Up Bonus 650", version: "1.0.0", logo: "IMG_20260904_121259_177.jpg", link: "https://diwagameshare.club?pid=294052353&channel=2010003&t=pdd2&pkg=com.diwagamedlx.app" },
     { name: "Diwa777", category: "Sign Up Bonus 250", version: "1.0.0", logo: "IMG_20260904_121314_569.jpg", link: "https://sharediwa7775.top?pid=464122371&channel=2010002&t=pdd2&pkg=com.diwa777wh.com" },
     { name: "Goodslot", category: "Sign Up Bonus 950", version: "1.0.0", logo: "IMG_20260904_121327_540.jpg", link: "https://sharegoodslots.vip?pid=396692864&channel=2020001&t=pdd2&pkg=com.goodslotsa.dss" },
-    { name: "Money Rummy", category: "Sign Up Bonus 950", version: "1.0.0", logo: "IMG_20260910_134532_812.jpg", link: "https://moneyrummyv.com/?code=T1X1NCXTSN4&t=1789027939" },
+    { name: "Boss Rummy", category: "Sign Up Bonus 950", version: "1.0.0", logo: "IMG_20260830_031013_336.jpg", link: "https://www.bossrummyxx.com/?code=9HFS3SWHV17&t=1786827373" },
     { name: "Diwa Play", category: "Sign Up Bonus 950", version: "1.0.0", logo: "IMG_20260910_134721_206.jpg", link: "https://diwaplayshare.club?pid=399680035&channel=2010002&t=pdd2&pkg=com.diwaplaywhl.app" },
     { name: "Jeet Spin", category: "Sign Up Bonus 950", version: "1.0.0", logo: "IMG_20261010_002626_902.jpg", link: "https://www.jeetspin13.com/?code=SYHXWPB4LM1&t=1790745051" },
     { name: "Diwa Ace", category: "Sign Up Bonus 950", version: "1.0.0", logo: "IMG_20261010_003058_847.jpg", link: "https://diwaace.diwaapp.workers.dev/?pid=465116426" },
