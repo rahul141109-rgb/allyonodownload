@@ -73,6 +73,7 @@ const apps = [
     { name: "Diwa Wow", category: "Sign Up Bonus 950", version: "1.0.0", logo: "IMG_20261018_012701_232.jpg", link: "https://diwawowshare.io?pid=529813006&channel=2010003&t=pdd2&pkg=com.diwawow003.app" },
     { name: "Diwa Spin", category: "Sign Up Bonus 950", version: "1.0.0", logo: "IMG_20261018_012928_002.jpg", link: "https://diwaspinshare.app?pid=449395291&channel=2010002&pkg=com.diwaspin0002.com" },
     { name: "Jaiho Play", category: "Sign Up Bonus 950", version: "1.0.0", logo: "IMG_20261018_013127_992.jpg", link: "https://downloadjaiho.com/?code=EGPKGRTYTS5&t=1792219618" },
+    { name: "Rummy Ludo", category: "Sign Up Bonus 950", version: "1.0.0", logo: "IMG_20261021_170052_107.jpg", link: "https://rummyludoapp30.com/?code=UWPLCM9B6LW&t=1788005144" },
     { name: "Club Inr", category: "Sign Up Bonus 950", version: "1.0.0", logo: "IMG_20261016_174013_105.jpg", link: "https://clubinr.baby/?code=9VC2XUQ4QVT&t=1792152559" }
     
 ];;
