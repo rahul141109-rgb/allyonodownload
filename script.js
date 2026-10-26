@@ -1,5 +1,5 @@
 const apps = [
-    { name: "Yono Rummy", category: "Sign Up Bonus ₹750", version: "1.7.6", logo: "IMG_20260830_034830_106.jpg", link: "https://yonorummy052.com/?code=VIPS2CEDZJF&t=1786221962" },
+    { name: "Spin101", category: "Sign Up Bonus ₹750", version: "4.5.7", logo: "IMG_20260830_120148_708.jpg", link: "https://spin101-f.com/?code=P4CN5MHJSNQ&t=1786828351" },
     { name: "Yono Games", category: "Sign Up Bonus ₹350", version: "5.0.3", logo: "IMG_20260830_034742_378.jpg", link: "https://yonogames8.com/?code=P6RXQSS6&t=1786222058" },
     { name: "Ind Rummy", category: "Sign Up Bonus ₹750", version: "4.1.0", logo: "IMG_20260830_031737_470.jpg", link: "https://rummyjoys.com/?code=R9A87SA849B&t=1786221848" },
     { name: "Yono Slots", category: "Sign Up Bonus ₹450", version: "3.8.2", logo: "IMG_20260830_034930_075.jpg", link: "https://yonoslotsjackwin.com/?code=59YC58TCXQ6&t=1786221904" },
@@ -24,7 +24,7 @@ const apps = [
     { name: "ShareSlots", category: "Sign Up Bonus ₹550", version: "2.4.0", logo: "IMG_20260830_033845_881.jpg", link: "https://share577.com/?code=YAZEH62P3T8&t=1786828181" },
     { name: "Slots Spin", category: "Sign Up Bonus ₹750", version: "5.8.2", logo: "IMG_20260830_033922_154.jpg", link: "https://www.slotsspinh.com/?code=XJBBC3QTQKE&t=1786828247" },
     { name: "Slots Winner", category: "Sign Up Bonus ₹650", version: "1.3.9", logo: "IMG_20260830_033959_263.jpg", link: "https://slotswinneri.com/?code=K4EZCJZ7UUV&t=1786828304" },
-    { name: "Spin101", category: "Sign Up Bonus ₹750", version: "4.5.7", logo: "IMG_20260830_120148_708.jpg", link: "https://spin101-f.com/?code=P4CN5MHJSNQ&t=1786828351" },
+    { name: "Yono Rummy", category: "Sign Up Bonus ₹750", version: "1.7.6", logo: "IMG_20260830_034830_106.jpg", link: "https://yonorummy052.com/?code=VIPS2CEDZJF&t=1786221962" },
     { name: "SpinCrush", category: "Sign Up Bonus ₹950", version: "2.7.1", logo: "IMG_20260830_034046_637.jpg", link: "https://cklfjeselfs.safelyearnmillionsbysharingonepersonaqfxzqyj9.com/?code=ADEHMXZNFXF&t=1786828443" },
     { name: "Spin Winner", category: "Sign Up Bonus ₹150", version: "8.0.4", logo: "IMG_20260830_015124_678.jpg", link: "https://spinwinner-m.com/?code=SDNR8L8M58L&t=1786828473" },
     { name: "Spin777", category: "Sign Up Bonus ₹950", version: "3.1.6", logo: "IMG_20260830_040020_480.jpg", link: "http://spin777-t.com/?code=YLWTTF6GDA2&t=1786828541" },
