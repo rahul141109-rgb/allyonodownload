@@ -1,5 +1,5 @@
 const apps = [
-    { name: "Spin101", category: "Sign Up Bonus ₹750", version: "4.5.7", logo: "IMG_20260830_120148_708.jpg", link: "https://spin101-f.com/?code=P4CN5MHJSNQ&t=1786828351" },
+    { name: "Spin101", category: "Sign Up Bonus ₹750", version: "4.5.7", logo: "IMG_20260830_120148_708.jpg", link: "https://spin101-k.net/?code=P4CYGK7EK8U&t=1793009641" },
     { name: "Yono Games", category: "Sign Up Bonus ₹350", version: "5.0.3", logo: "IMG_20260830_034742_378.jpg", link: "https://yonogames8.com/?code=P6RXQSS6&t=1786222058" },
     { name: "Ind Rummy", category: "Sign Up Bonus ₹750", version: "4.1.0", logo: "IMG_20260830_031737_470.jpg", link: "https://rummyjoys.com/?code=R9A87SA849B&t=1786221848" },
     { name: "Yono Slots", category: "Sign Up Bonus ₹450", version: "3.8.2", logo: "IMG_20260830_034930_075.jpg", link: "https://yonoslotsjackwin.com/?code=59YC58TCXQ6&t=1786221904" },
