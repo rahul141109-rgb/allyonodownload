@@ -1,9 +1,9 @@
 const apps = [
-    { name: "Spin101", category: "Sign Up Bonus ₹750", version: "4.5.7", logo: "IMG_20260830_120148_708.jpg", link: "https://spin101-k.net/?code=P4CYGK7EK8U&t=1793009641" },
+    { name: "Bingo101", category: "Sign Up Bonus ₹550", version: "2.1.8", logo: "IMG_20260830_015303_606.jpg", link: "https://bin4go101.com/?code=6YFXW27QWHY&t=1786827706" },
     { name: "Yono Games", category: "Sign Up Bonus ₹350", version: "5.0.3", logo: "IMG_20260830_034742_378.jpg", link: "https://yonogames8.com/?code=P6RXQSS6&t=1786222058" },
     { name: "Ind Rummy", category: "Sign Up Bonus ₹750", version: "4.1.0", logo: "IMG_20260830_031737_470.jpg", link: "https://rummyjoys.com/?code=R9A87SA849B&t=1786221848" },
     { name: "Yono Slots", category: "Sign Up Bonus ₹450", version: "3.8.2", logo: "IMG_20260830_034930_075.jpg", link: "https://yonoslotsjackwin.com/?code=59YC58TCXQ6&t=1786221904" },
-    { name: "Bingo101", category: "Sign Up Bonus ₹550", version: "2.1.8", logo: "IMG_20260830_015303_606.jpg", link: "https://bin4go101.com/?code=6YFXW27QWHY&t=1786827706" },
+    { name: "Spin101", category: "Sign Up Bonus ₹750", version: "4.5.7", logo: "IMG_20260830_120148_708.jpg", link: "https://spin101-k.net/?code=P4CYGK7EK8U&t=1793009641" },
     { name: "Boss Rummy", category: "Sign Up Bonus 950", version: "1.0.0", logo: "IMG_20260830_031013_336.jpg", link: "https://www.bossrummyxx.com/?code=9HFS3SWHV17&t=1786827373" },
     { name: "JaiHo Rummy", category: "Sign Up Bonus ₹150", version: "2.9.4", logo: "IMG_20260830_040152_764.jpg", link: "https://jaihorummycode.com/?code=E747C347KC5&t=1786222143" },
     { name: "Jaiho91", category: "Sign Up Bonus ₹450", version: "6.2.0", logo: "IMG_20260830_032042_527.jpg", link: "https://jaiho91.cc/?code=C42HWMFCG4L&t=1786222196" },
