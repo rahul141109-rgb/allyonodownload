@@ -26,7 +26,8 @@
       const { data, error } = await db
         .from("apps")
         .select("id,name,description,category,icon,download_url,version,created_at")
-        .order("created_at", { ascending: false });
+        .order("created_at", { ascending: true })
+        .order("id", { ascending: true });
 
       if (error) throw error;
 
@@ -39,19 +40,20 @@
         description: app.description || ""
       }));
 
-      // Latest Supabase apps first, followed by existing apps
-      apps = [...newApps, ...apps];
+      // Existing apps first, newly added apps afterwards
+      apps = [...apps, ...newApps];
 
+      // Rebuild search and pagination
       filteredApps = [...apps];
       currentPage = 1;
 
       appCount.textContent = apps.length;
       renderApps();
 
-      console.log("Supabase apps loaded:", newApps.length);
+      console.log("Total apps:", apps.length);
 
     } catch (error) {
-      console.error("Could not load Supabase apps:", error);
+      console.error("Supabase error:", error);
     }
   }
 
