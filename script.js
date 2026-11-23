@@ -1,4 +1,4 @@
-const apps = [
+let apps = [
     { name: "Bingo101", category: "Sign Up Bonus ₹550", version: "2.1.8", logo: "IMG_20260830_015303_606.jpg", link: "https://bin4go101.com/?code=6YFXW27QWHY&t=1786827706" },
     { name: "Yono Games", category: "Sign Up Bonus ₹350", version: "5.0.3", logo: "IMG_20260830_034742_378.jpg", link: "https://yonogames8.com/?code=P6RXQSS6&t=1786222058" },
     { name: "Ind Rummy", category: "Sign Up Bonus ₹750", version: "4.1.0", logo: "IMG_20260830_031737_470.jpg", link: "https://rummyjoys.com/?code=R9A87SA849B&t=1786221848" },
