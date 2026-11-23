@@ -4,593 +4,518 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Harry Admin Panel</title>
-
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
 <style>
 *{box-sizing:border-box}
 body{
-  margin:0;background:#0f172a;color:white;
-  font-family:Arial,sans-serif;padding:20px
+  margin:0;background:#f1f5f9;color:#1e293b;
+  font-family:Arial,sans-serif;padding:15px
 }
-.container{max-width:850px;margin:35px auto}
+.container{max-width:950px;margin:25px auto}
 .card{
-  background:#1e293b;padding:22px;
-  border-radius:14px;margin-bottom:20px
+  background:white;padding:22px;border-radius:12px;
+  margin-bottom:20px;box-shadow:0 2px 10px #0000000b
 }
-h1{color:#38bdf8}
-input,textarea{
+h1{color:#0369a1;margin-top:0}
+input,textarea,select{
   width:100%;padding:13px;margin:8px 0;
-  border:1px solid #475569;border-radius:8px;
-  background:#0f172a;color:white
+  border:1px solid #cbd5e1;border-radius:8px;
+  background:white;color:#1e293b;font-size:15px
 }
+textarea{min-height:85px;resize:vertical}
 button{
   padding:12px 17px;border:0;border-radius:8px;
-  background:#0284c7;color:white;
-  cursor:pointer;margin:5px
+  background:#0284c7;color:white;cursor:pointer;
+  margin:5px 3px;font-size:14px
 }
 button:disabled{opacity:.5;cursor:not-allowed}
 .delete{background:#dc2626}
 .edit{background:#16a34a}
-.hidden{display:none}
+.secondary{background:#64748b}
+.hidden{display:none!important}
 .app{
-  background:#334155;padding:15px;
-  border-radius:10px;margin:12px 0
+  background:#f8fafc;border:1px solid #e2e8f0;
+  padding:15px;border-radius:10px;margin:12px 0;
+  display:flex;gap:14px;align-items:center;flex-wrap:wrap
 }
-small{color:#cbd5e1}
+.app img{
+  width:65px;height:65px;object-fit:cover;
+  border-radius:12px;background:#e2e8f0
+}
+.app-info{flex:1;min-width:180px}
+small{color:#64748b}
 .link{
-  color:#38bdf8;cursor:pointer;
-  text-decoration:underline;
+  color:#0284c7;cursor:pointer;text-decoration:underline;
   display:inline-block;margin:12px 5px
 }
+#logoPreview{
+  width:90px;height:90px;object-fit:cover;
+  border-radius:12px;display:none;margin:10px 0;
+  border:1px solid #cbd5e1
+}
+.stats{
+  background:#e0f2fe;padding:18px;border-radius:10px;
+  margin:15px 0
+}
+.stats h2{margin:5px 0;color:#0369a1}
+label{display:block;margin-top:10px;font-weight:bold;font-size:14px}
+#appMsg,#loginMsg,#forgotMsg,#resetMsg{overflow-wrap:anywhere}
 </style>
 </head>
-
 <body>
 <div class="container">
-
 <!-- LOGIN -->
 <div id="login" class="card">
 <h1>Harry Admin</h1>
 <p>Login to your dashboard</p>
-
 <form id="loginForm">
-<input id="email" type="email"
-placeholder="Admin Email" required>
-
-<input id="password" type="password"
-placeholder="Password" required>
-
+<input id="email" type="email" placeholder="Admin Email" required>
+<input id="password" type="password" placeholder="Password" required>
 <button type="submit">Login</button>
 </form>
-
 <p><span class="link" id="forgotLink">Forgot Password?</span></p>
 <p id="loginMsg"></p>
 </div>
-
-
 <!-- FORGOT PASSWORD -->
 <div id="forgot" class="card hidden">
 <h1>Forgot Password</h1>
 <p>Enter your admin email to receive a reset link.</p>
-
 <form id="forgotForm">
-<input id="resetEmail" type="email"
-placeholder="Admin Email" required>
-
+<input id="resetEmail" type="email" placeholder="Admin Email" required>
 <button type="submit" id="sendReset">Send Reset Link</button>
 </form>
-
 <p id="forgotMsg"></p>
 <span class="link" id="backLogin">Back to Login</span>
 </div>
-
-
 <!-- RESET PASSWORD -->
 <div id="reset" class="card hidden">
 <h1>Reset Password</h1>
-<p>Enter your new admin password.</p>
-
 <form id="resetForm">
 <input id="newPassword" type="password"
 placeholder="New Password" minlength="8" required>
-
 <input id="confirmPassword" type="password"
 placeholder="Confirm New Password" minlength="8" required>
-
 <button type="submit" id="updatePassword">Update Password</button>
 </form>
-
 <p id="resetMsg"></p>
 </div>
-
-
 <!-- DASHBOARD -->
 <div id="dashboard" class="hidden">
-
 <div class="card">
 <h1>Harry Admin Dashboard</h1>
-<p>Welcome, <b>harryadmin</b></p>
-<h2>Total Apps: <span id="total">0</span></h2>
+<p>Welcome, Admin</p>
+<div class="stats">
+<small>Total Apps</small>
+<h2 id="total">0</h2>
+</div>
 <button id="logout">Logout</button>
 </div>
-
+<!-- ADD / EDIT APP -->
 <div class="card">
 <h2 id="formTitle">Add New App</h2>
-
 <form id="appForm">
-<input id="appName" placeholder="App Name" required>
+<label>App Name *</label>
+<input id="appName" placeholder="Enter App Name" required>
+<label>App Logo</label>
+<input id="appLogo" type="file" accept="image/*">
+<img id="logoPreview" alt="Logo Preview">
+<small>Choose an image from your phone gallery.</small>
+<label>Description</label>
 <textarea id="description" placeholder="App Description"></textarea>
-<input id="category" placeholder="App Category">
-
-<button type="submit">Save App</button>
-<button type="button" id="cancelEdit" class="hidden">Cancel Edit</button>
+<label>Category</label>
+<input id="category" placeholder="Example: Games, Tools, Entertainment">
+<label>Version</label>
+<input id="version" placeholder="Example: 1.0.0">
+<label>Download URL *</label>
+<input id="downloadUrl" type="url"
+placeholder="https://example.com/download" required>
+<button type="submit" id="saveApp">Save App</button>
+<button type="button" id="cancelEdit" class="secondary hidden">Cancel Edit</button>
 </form>
-
 <p id="appMsg"></p>
 </div>
-
+<!-- MANAGE APPS -->
 <div class="card">
 <h2>Manage Apps</h2>
+<input id="searchApps" type="search" placeholder="Search apps by name or category...">
 <div id="appList">Loading apps...</div>
 </div>
-
 </div>
 </div>
-
-
 <script>
-
 // SUPABASE CONNECTION
-
 const SUPABASE_URL =
 "https://ygrktvzrlcomugutbmpo.supabase.co";
-
 const SUPABASE_KEY =
 "sb_publishable_ApR0JphkNeyHj8Ul993TPQ_JLZaUo6T";
-
 const ADMIN_URL =
 "https://allyonodownload.site/admin/";
-
 const db = window.supabase.createClient(
   SUPABASE_URL,
   SUPABASE_KEY
 );
-
 const $ = id => document.getElementById(id);
-
 let editingId = null;
+let existingIcon = "";
+let allApps = [];
 let recoveryMode = false;
-
 const params = new URLSearchParams(window.location.search);
-
 const recoveryLink =
   window.location.hash.includes("type=recovery") ||
   params.get("type") === "recovery" ||
   params.has("code");
-
-
 // PAGE DISPLAY
-
 function showPage(page){
   ["login","forgot","reset","dashboard"].forEach(id=>{
     $(id).classList.add("hidden");
   });
-
   $(page).classList.remove("hidden");
 }
-
 function message(id,text){
   $(id).textContent = text;
 }
-
-
+// LOGO PREVIEW
+$("appLogo").addEventListener("change",()=>{
+  const file = $("appLogo").files[0];
+  if(!file){
+    $("logoPreview").style.display =
+      existingIcon ? "block" : "none";
+    $("logoPreview").src = existingIcon;
+    return;
+  }
+  if(!file.type.startsWith("image/")){
+    message("appMsg","Please select an image file.");
+    $("appLogo").value = "";
+    return;
+  }
+  if(file.size > 3 * 1024 * 1024){
+    message("appMsg","Logo must be smaller than 3 MB.");
+    $("appLogo").value = "";
+    return;
+  }
+  $("logoPreview").src = URL.createObjectURL(file);
+  $("logoPreview").style.display = "block";
+  message("appMsg","");
+});
+// UPLOAD LOGO TO SUPABASE STORAGE
+async function uploadLogo(file){
+  if(!file) return existingIcon;
+  const extension =
+    file.name.split(".").pop().replace(/[^a-zA-Z0-9]/g,"") || "jpg";
+  const filePath =
+    Date.now() + "-" +
+    Math.random().toString(36).slice(2) +
+    "." + extension;
+  const {error} = await db.storage
+    .from("app-logos")
+    .upload(filePath,file,{
+      cacheControl:"3600",
+      upsert:false,
+      contentType:file.type
+    });
+  if(error) throw error;
+  const {data} = db.storage
+    .from("app-logos")
+    .getPublicUrl(filePath);
+  return data.publicUrl;
+}
 // AUTH EVENTS
-
 db.auth.onAuthStateChange((event,session)=>{
-
   if(event === "PASSWORD_RECOVERY"){
     recoveryMode = true;
     showPage("reset");
   }
-
   if(event === "SIGNED_OUT"){
     recoveryMode = false;
     showPage("login");
   }
-
 });
-
-
 // ADMIN CHECK
-
 async function checkAdmin(){
-
   const {data:{session},error:sessionError} =
     await db.auth.getSession();
-
   if(sessionError || !session){
     showPage("login");
     return false;
   }
-
   const {data,error} = await db.rpc("is_admin");
-
   if(error || data !== true){
-
     await db.auth.signOut();
-
     showPage("login");
-
     message("loginMsg","Access denied: Admin only.");
-
     return false;
   }
-
   showPage("dashboard");
-  loadApps();
-
+  await loadApps();
   return true;
 }
-
-
 // LOGIN
-
 $("loginForm").addEventListener("submit",async e=>{
-
   e.preventDefault();
-
   message("loginMsg","Checking login...");
-
   const {error} = await db.auth.signInWithPassword({
-
     email:$("email").value.trim(),
     password:$("password").value
-
   });
-
   if(error){
     message("loginMsg",error.message);
     return;
   }
-
   await checkAdmin();
-
 });
-
-
 // FORGOT PASSWORD
-
 $("forgotLink").onclick=()=>{
-
   $("resetEmail").value = $("email").value.trim();
-
   message("forgotMsg","");
-
   showPage("forgot");
-
 };
-
-
 $("backLogin").onclick=()=>showPage("login");
-
-
-// SEND RESET EMAIL
-
 $("forgotForm").addEventListener("submit",async e=>{
-
   e.preventDefault();
-
   const email = $("resetEmail").value.trim();
-
   message("forgotMsg","Sending reset email...");
-
   $("sendReset").disabled = true;
-
   const {error} = await db.auth.resetPasswordForEmail(email,{
-
     redirectTo:ADMIN_URL
-
   });
-
   $("sendReset").disabled = false;
-
   if(error){
     message("forgotMsg",error.message);
     return;
   }
-
-  message(
-    "forgotMsg",
+  message("forgotMsg",
     "If the account exists, a reset email has been sent. Check your inbox."
   );
-
 });
-
-
 // UPDATE PASSWORD
-
 $("resetForm").addEventListener("submit",async e=>{
-
   e.preventDefault();
-
   const password = $("newPassword").value;
   const confirm = $("confirmPassword").value;
-
   if(password.length < 8){
     message("resetMsg","Password must be at least 8 characters.");
     return;
   }
-
   if(password !== confirm){
     message("resetMsg","Passwords do not match!");
     return;
   }
-
   message("resetMsg","Verifying recovery session...");
-
   $("updatePassword").disabled = true;
-
   const {data:{session},error:sessionError} =
     await db.auth.getSession();
-
   if(sessionError || !session){
-
-    message(
-      "resetMsg",
-      "Recovery session expired. Please request a new reset email."
-    );
-
+    message("resetMsg","Recovery session expired. Request a new reset email.");
     $("updatePassword").disabled = false;
     return;
   }
-
-  // Verify that this account is an admin
-
-  const {data,isAdminError} = await db.rpc("is_admin");
-
+  const {data,error:isAdminError} = await db.rpc("is_admin");
   if(isAdminError || data !== true){
-
     message("resetMsg","Access denied: Admin only.");
-
     $("updatePassword").disabled = false;
     return;
   }
-
-  const {error} = await db.auth.updateUser({
-    password:password
-  });
-
+  const {error} = await db.auth.updateUser({password});
   $("updatePassword").disabled = false;
-
   if(error){
     message("resetMsg",error.message);
     return;
   }
-
   recoveryMode = false;
-
   await db.auth.signOut();
-
   $("resetForm").reset();
-
   window.history.replaceState(
     {},
     document.title,
     window.location.pathname
   );
-
-  message(
-    "loginMsg",
+  message("loginMsg",
     "Password updated successfully! Login with your new password."
   );
-
   showPage("login");
-
 });
-
-
 // LOAD APPS
-
 async function loadApps(){
-
+  message("appList","Loading apps...");
   const {data,error} = await db
     .from("apps")
-    .select("id,name,description,category")
+    .select("id,name,description,category,icon,download_url,version,created_at")
     .order("id",{ascending:false});
-
   if(error){
     message("appList",error.message);
     return;
   }
-
-  $("total").textContent = data.length;
+  allApps = data || [];
+  $("total").textContent = allApps.length;
+  renderApps();
+}
+// RENDER APPS + SEARCH
+function renderApps(){
+  const query = $("searchApps").value.trim().toLowerCase();
+  const filtered = allApps.filter(app=>
+    (app.name || "").toLowerCase().includes(query) ||
+    (app.category || "").toLowerCase().includes(query)
+  );
   $("appList").replaceChildren();
-
-  data.forEach(app=>{
-
+  if(filtered.length === 0){
+    message("appList",
+      query ? "No matching apps found." : "No apps added yet."
+    );
+    return;
+  }
+  filtered.forEach(app=>{
     const box = document.createElement("div");
     box.className = "app";
-
+    if(app.icon){
+      const img = document.createElement("img");
+      img.src = app.icon;
+      img.alt = app.name + " logo";
+      box.appendChild(img);
+    }
+    const info = document.createElement("div");
+    info.className = "app-info";
     const name = document.createElement("h3");
-    name.textContent = app.name;
-
+    name.textContent = app.name || "";
     const desc = document.createElement("p");
     desc.textContent = app.description || "";
-
     const cat = document.createElement("small");
-    cat.textContent = app.category || "";
-
+    cat.textContent = "Category: " + (app.category || "Not set");
+    const version = document.createElement("p");
+    version.textContent = "Version: " + (app.version || "Not set");
+    const download = document.createElement("a");
+    download.textContent = "Download Link";
+    download.href = app.download_url || "#";
+    download.target = "_blank";
+    download.rel = "noopener noreferrer";
+    info.append(name,desc,cat,document.createElement("br"),
+      version,download);
     const edit = document.createElement("button");
     edit.className = "edit";
     edit.textContent = "Edit";
     edit.onclick = ()=>editApp(app);
-
     const del = document.createElement("button");
     del.className = "delete";
     del.textContent = "Delete";
     del.onclick = ()=>deleteApp(app.id);
-
-    box.append(
-      name,
-      desc,
-      cat,
-      document.createElement("br"),
-      edit,
-      del
-    );
-
+    box.append(info,edit,del);
     $("appList").appendChild(box);
-
   });
-
-  if(data.length === 0){
-    message("appList","No apps added yet.");
-  }
-
 }
-
-
+$("searchApps").addEventListener("input",renderApps);
 // ADD / UPDATE APP
-
 $("appForm").addEventListener("submit",async e=>{
-
   e.preventDefault();
-
-  const app = {
-    name:$("appName").value.trim(),
-    description:$("description").value.trim(),
-    category:$("category").value.trim()
-  };
-
-  let result;
-
-  if(editingId){
-
-    result = await db.from("apps")
-      .update(app)
-      .eq("id",editingId);
-
-  }else{
-
-    result = await db.from("apps").insert([app]);
-
+  const button = $("saveApp");
+  button.disabled = true;
+  message("appMsg","Saving app...");
+  try{
+    const file = $("appLogo").files[0];
+    const icon = await uploadLogo(file);
+    const app = {
+      name:$("appName").value.trim(),
+      description:$("description").value.trim(),
+      category:$("category").value.trim(),
+      version:$("version").value.trim(),
+      icon:icon || null,
+      download_url:$("downloadUrl").value.trim()
+    };
+    let result;
+    if(editingId){
+      result = await db.from("apps")
+        .update(app)
+        .eq("id",editingId);
+    }else{
+      result = await db.from("apps")
+        .insert([app]);
+    }
+    if(result.error) throw result.error;
+    message("appMsg","App saved successfully!");
+    resetForm();
+    await loadApps();
+  }catch(error){
+    message("appMsg",error.message || "Something went wrong.");
   }
-
-  if(result.error){
-    message("appMsg",result.error.message);
-    return;
-  }
-
-  message("appMsg","App saved successfully!");
-
-  resetForm();
-  loadApps();
-
+  button.disabled = false;
 });
-
-
 // EDIT APP
-
 function editApp(app){
-
   editingId = app.id;
-
+  existingIcon = app.icon || "";
   $("appName").value = app.name || "";
   $("description").value = app.description || "";
   $("category").value = app.category || "";
-
+  $("version").value = app.version || "";
+  $("downloadUrl").value = app.download_url || "";
+  $("logoPreview").src = existingIcon;
+  $("logoPreview").style.display =
+    existingIcon ? "block" : "none";
   $("formTitle").textContent = "Edit App";
-
+  $("saveApp").textContent = "Update App";
   $("cancelEdit").classList.remove("hidden");
-
-  window.scrollTo(0,0);
-
+  message("appMsg","Editing: " + app.name);
+  window.scrollTo({top:0,behavior:"smooth"});
 }
-
-
 // DELETE APP
-
 async function deleteApp(id){
-
   if(!confirm("Are you sure you want to delete this app?"))
     return;
-
   const {error} = await db.from("apps")
     .delete()
     .eq("id",id);
-
   if(error){
     message("appMsg",error.message);
     return;
   }
-
   message("appMsg","App deleted successfully!");
-
-  loadApps();
-
+  await loadApps();
 }
-
-
-// RESET APP FORM
-
+// RESET FORM
 function resetForm(){
-
   editingId = null;
-
+  existingIcon = "";
   $("appForm").reset();
-
+  $("logoPreview").src = "";
+  $("logoPreview").style.display = "none";
   $("formTitle").textContent = "Add New App";
-
+  $("saveApp").textContent = "Save App";
   $("cancelEdit").classList.add("hidden");
-
 }
-
-$("cancelEdit").onclick = resetForm;
-
-
+$("cancelEdit").onclick=()=>{
+  resetForm();
+  message("appMsg","");
+};
 // LOGOUT
-
-$("logout").onclick = async()=>{
+$("logout").onclick=async()=>{
   await db.auth.signOut();
   showPage("login");
 };
-
-
 // INITIALIZE
-
 async function initialize(){
-
   const {data:{session},error} = await db.auth.getSession();
-
+  if(error){
+    showPage("login");
+    message("loginMsg",error.message);
+    return;
+  }
   if(recoveryLink){
-
     recoveryMode = true;
-
     if(session){
       showPage("reset");
     }else{
       showPage("login");
-      message(
-        "loginMsg",
+      message("loginMsg",
         "Recovery session not found. Please open the latest reset email link."
       );
     }
-
     return;
   }
-
   if(session){
     await checkAdmin();
   }else{
     showPage("login");
   }
-
 }
-
 initialize();
-
 </script>
-
 </body>
 </html>
